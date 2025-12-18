@@ -55,7 +55,7 @@
                                         <td>{{$product->quantity}}</td> 
                                        
                                         <td>
-                                            <a href="#" class="btn btn-warning btn-sm">Modifier</a>  
+                                            <a href="products.edit" class="btn btn-warning btn-sm">Modifier</a>  
                                               
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal{{$product->id}}">
                                                 Supprimer
