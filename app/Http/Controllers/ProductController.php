@@ -50,4 +50,12 @@ public function create()
         return redirect()->route('products.index')->with('success', 'Produit supprime avec succes.');
     }
 
+        public function delete($id)
+    {{
+        $product = Product::findOrFail($id);
+        $product->delete();
+
+        return redirect()->route('products.index')->with('success', 'Produit supprime avec succes.');
+    }
+}
 }
