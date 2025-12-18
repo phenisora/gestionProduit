@@ -19,7 +19,7 @@
 
         <div class="card card-warning card-outline mb-4">
             <!--begin::Header-->
-            
+
             <div class="card-header">
                 <h5 class="card-title mb-0">Formulaire d'ajout d'un produit</h5>
             </div>
@@ -27,11 +27,11 @@
             @if (session('success'))
                  <div class='alert alert-danger'>
                     {{session('success')}}
-                 </div>   
-            @endif 
+                 </div>
+            @endif
 
             <!--begin::Form-->
-            <form action="{{route('etudiant.store')}}" method="POST">
+            <form action="{{route('products.store')}}" method="POST">
     @csrf
     <div class="card-body">
         <div class="row mb-3">
