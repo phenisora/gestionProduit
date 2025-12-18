@@ -1,4 +1,3 @@
-
 @extends('layouts.base')
 
 @section('content')
@@ -55,7 +54,13 @@
                                         <td>{{$product->quantity}}</td>
 
                                         <td>
+<<<<<<< HEAD
                                             <a href="{{route('products.edit', $product->id)}}" class="btn btn-warning btn-sm">Modifier</a>
+=======
+
+
+                                            <a href="products.edit" class="btn btn-warning btn-sm">Modifier</a>
+>>>>>>> refs/remotes/origin/master
 
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal{{$product->id}}">
                                                 Supprimer
@@ -72,13 +77,13 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                        Etes vous sur de vouloir supprimer le professeur
-                                        <b>{{$product->name}}</b>?
+                                           Etes vous sur de vouloir supprimer le professeur
+                                           <b>{{$product->name}}</b>?
 
                                         </div>
                                         <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                        <form action="{{route('products.delete', $product->id)}}" method="POST">
+                                        <form action="{{route('products.delete',$product->id)}}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn btn"> Confirmer</button>
