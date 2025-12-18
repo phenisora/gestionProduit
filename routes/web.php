@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -12,9 +13,22 @@ Route::get('/', function () {
 //Route pour la page d'acceuil 
 Route::get('/dashboard',[ProductController::class,'dashboard'])->name('dashboard');
 
-//Route pour le client
 
+<<<<<<< HEAD
 Route::get('/products',[ProductController::class,'index'])->name('products.index');
 Route::get('/products/create',[ProductController::class,'create'])->name('products.create');
 Route::post('/products/store',[ProductController::class,'store'])->name('products.store');
 Route::get('/products/edit',[ProductController::class,'edit'])->name('products.edit');
+=======
+Route::get('products', [ProductController::class,'index'])->name('products.index');
+Route::get('/products/create', [ProductController::class,'create'])->name('products.create');
+Route::post('/products/store',[ProductController::class,'store'])->name('products.store');
+
+
+
+
+
+
+
+
+>>>>>>> 8f69df4a790a0dc2ecd546acbc4e9eef8f75d835

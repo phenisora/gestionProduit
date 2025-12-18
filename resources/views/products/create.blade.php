@@ -31,7 +31,7 @@
             @endif 
 
             <!--begin::Form-->
-            <form action="{{route('etudiant.store')}}" method="POST">
+            <form action="{{route('products.store')}}" method="POST">
     @csrf
     <div class="card-body">
         <div class="row mb-3">
