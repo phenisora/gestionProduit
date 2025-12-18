@@ -35,7 +35,7 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required|string',
             'description' => 'required|string',
-            'price' => 'required|float',
+            'price' => 'required',
             'quantity' => 'required|integer|min:0',
 
         ]);
@@ -43,6 +43,21 @@ class ProductController extends Controller
         Product::create($request->all());
 
         return redirect()->route('products.index')->with('success', 'Produit ajoute avec succes.');
+    }
+
+     public function edit(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string',
+            'description' => 'required|string',
+            'price' => 'required|float',
+            'quantity' => 'required|integer|min:0',
+
+        ]);
+
+        Product::create($request->all());
+
+        return redirect()->route('products.index')->with('success', 'Produit modifier  avec succes.');
     }
 
 
