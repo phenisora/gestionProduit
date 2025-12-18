@@ -48,19 +48,11 @@ public function create()
         $product->delete();
         return redirect()->route('products.index')->with('success', 'Produit supprime avec succes.');
     }
-    public function edit(Request $request)
+    public function edit(Request $request,$id)
     {
-        $request->validate([
-            'name' => 'required|string',
-            'description' => 'required|string',
-            'price' => 'required|float',
-            'quantity' => 'required|integer|min:0',
-
-        ]);
-
-        Product::create($request->all());
-
-        return redirect()->route('products.create')->with('success', 'Produit modifier  avec succes.');
+        
+        $product = Product::findOrFail($id);
+        return view('products.edit', compact('product')) ;
     }
 
 
