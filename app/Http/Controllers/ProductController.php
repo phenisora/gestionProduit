@@ -46,7 +46,6 @@ public function create()
     {
         $product = Product::findOrFail($id);
         $product->delete();
-
         return redirect()->route('products.index')->with('success', 'Produit supprime avec succes.');
     }
     public function edit(Request $request)
@@ -63,5 +62,6 @@ public function create()
 
         return redirect()->route('products.create')->with('success', 'Produit modifier  avec succes.');
     }
+
 
 }
