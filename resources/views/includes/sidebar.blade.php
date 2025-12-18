@@ -38,34 +38,13 @@
           </li>
            <!--Fonctionnalité gestion des clients-->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('products.index') }}" class="nav-link">
                 <i class="fa-solid fa-people-line" style="color: #bfd4f7;"></i>
                 <p>Gestion des produits</p>
             </a>
           </li>
              <!--Fonctionnalité des produits et services-->
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                 <i class="fa-regular fa-newspaper" style="color: #d7e3f9;"></i>
-                  <p>Produits/Services</p>
-              </a>
-            </li>
-              <!--Fonctionnalité pour la gestion des factures-->
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="fa-solid fa-file-invoice" style="color: #c3d3ee;"></i>
-                  <p>Gestion des factures</p>
-              </a>
-            </li>
-
-            <!--Fonctionnalité pour les historiques-->
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                 <i class="fa-solid fa-chart-bar" style="color: #d6e9f0;"></i>
-                  <p>Historiques</p>
-              </a>
-            </li>
-
+          
            
   
 

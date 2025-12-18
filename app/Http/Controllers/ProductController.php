@@ -33,7 +33,7 @@ public function create()
         $request->validate([
             'name' => 'required|string',
             'description' => 'required|string',
-            'price' => 'required|float',
+            'price' => 'required',
             'quantity' => 'required|integer|min:0',
 
     ]);
