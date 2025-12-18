@@ -33,7 +33,7 @@
                         </ul>
                     </div>
                 @endif
-                <form action="{{ route('products.update', $product->id ) }}" method="POST">
+                <form action="{{ route('products.edit', $product->id ) }}" method="POST">
                     @csrf
                     @method('PUT') 
                     

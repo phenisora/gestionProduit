@@ -28,13 +28,13 @@ public function create()
 }
 
 
-public function store(Request $request)
-{
-    $request->validate([
-        'name' => 'required|string',
-        'description' => 'required|string',
-        'price' => 'required|float',
-        'quantity' => 'required|integer|min:0',
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string',
+            'description' => 'required|string',
+            'price' => 'required|float',
+            'quantity' => 'required|integer|min:0',
 
     ]);
 
@@ -42,15 +42,12 @@ public function store(Request $request)
 
     return redirect()->route('products.index')->with('success', 'Produit ajoute avec succes.');
 }
+    public function delete($id)
+    {
+        $product = Product::findOrFail($id);
+        $product->delete();
 
-public function delete($id)
-{
-    $product = Product::findOrFail($id);
-    $product->delete();
-
-    return redirect()->route('products.index')->with('success', 'Produit supprime avec succes.');
-
-
-}
+        return redirect()->route('products.index')->with('success', 'Produit supprime avec succes.');
+    }
 
 }
