@@ -16,34 +16,33 @@ class ProductController extends Controller
         return view('dashboard');
     }
 
-
-
     public function index()
-    {
-        $products = Product::all();
-        return view('products.index', compact('products'));
-    }
+{
+    $products = Product::all();
+    return view('products.index', compact('products'));
+}
 
-    public function create()
-    {
-        return view('products.create');
-    }
+public function create()
+{
+    return view('products.create');
+}
 
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string',
-            'description' => 'required|string',
-            'price' => 'required|float',
-            'quantity' => 'required|integer|min:0',
+public function store(Request $request)
+{
+    $request->validate([
+        'name' => 'required|string',
+        'description' => 'required|string',
+        'price' => 'required|float',
+        'quantity' => 'required|integer|min:0',
 
-        ]);
+    ]);
 
-        Product::create($request->all());
+    Product::create($request->all());
 
-        return redirect()->route('products.index')->with('success', 'Produit ajoute avec succes.');
-    }
+    return redirect()->route('products.index')->with('success', 'Produit ajoute avec succes.');
+}
+
 
 
 }
