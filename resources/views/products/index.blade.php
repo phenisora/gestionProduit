@@ -55,7 +55,7 @@
                                         <td>{{$product->quantity}}</td> 
                                        
                                         <td>
-                                            <a href="{{route('products.edit',$product->id)}}" class="btn btn-warning btn-sm">Modifier</a>  
+                                            <a href="#" class="btn btn-warning btn-sm">Modifier</a>  
                                               
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal{{$product->id}}">
                                                 Supprimer
@@ -78,7 +78,7 @@
                                         </div>
                                         <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                        <form action="{{route('products.delete',$product->id)}}" method="POST">
+                                        <form action="#" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn btn"> Confirmer</button>
