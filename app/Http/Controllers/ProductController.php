@@ -55,7 +55,7 @@ class ProductController extends Controller
 
         ]);
 
-        Product::create($request->all());
+        Product::index($request->all());
 
         return redirect()->route('products.index')->with('success', 'Produit modifier  avec succes.');
     }
