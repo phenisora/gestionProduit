@@ -5,7 +5,7 @@
     <!--begin::App Content Header-->
     <div class="app-content-header">
         <div class="container-fluid">
-           
+
         </div>
     </div>
     <!--end::App Content Header-->
@@ -33,8 +33,8 @@
                             @if (session('success'))
                             <div class='alert alert-danger'>
                                {{session('success')}}
-                            </div>   
-                            @endif 
+                            </div>
+                            @endif
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -46,17 +46,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @forelse($products as $product)  
+                                @forelse($products as $product)
 
                                     <tr class="align-middle">
-                                        <td>{{$product->id}}</td> 
-                                        <td>{{$product->name}}</td> 
-                                        <td>{{$product->description}}</td> 
-                                        <td>{{$product->quantity}}</td> 
-                                       
+                                        <td>{{$product->id}}</td>
+                                        <td>{{$product->name}}</td>
+                                        <td>{{$product->description}}</td>
+                                        <td>{{$product->quantity}}</td>
+
                                         <td>
-                                            <a href="products.edit" class="btn btn-warning btn-sm">Modifier</a>  
-                                              
+                                            <a href="products.edit" class="btn btn-warning btn-sm">Modifier</a>
+
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal{{$product->id}}">
                                                 Supprimer
                                               </button>
@@ -72,8 +72,8 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                           Etes vous sur de vouloir supprimer le professeur
-                                           <b>{{$product->name}}</b>?
+                                        Etes vous sur de vouloir supprimer le professeur
+                                        <b>{{$product->name}}</b>?
 
                                         </div>
                                         <div class="modal-footer">
@@ -82,15 +82,15 @@
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn btn"> Confirmer</button>
-                                        </form> 
+                                        </form>
                                         </div>
                                     </div>
                                     </div>
   </div>
-                                    @empty       
-                                        
+                                    @empty
+
                                     @endforelse
-                                
+
                             </table>
                         </div>
                     </div>
@@ -100,4 +100,3 @@
                 <!-- Include Footer -->
 
             @endsection
-           
